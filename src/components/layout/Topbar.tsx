@@ -1,4 +1,3 @@
-import logo from "../../assets/logo.png";
 import { StatusBadge } from "@/components/common/StatusBadge";
 
 export default function Topbar() {

@@ -2,7 +2,7 @@ import { StatusBadge } from "../common/StatusBadge";
 
 export default function Hero() {
   return (
-    <section className="relative pt-40 pb-16 px-4 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
+    <section className="relative pt-42 pb-16 px-4 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
       <StatusBadge text="Enterprise Solutions" className="mb-5" />
 
       {/* Headlines */}
@@ -11,7 +11,7 @@ export default function Hero() {
         Future of AI <span className="italic font-light">Growth</span>
       </h1>
 
-      <p className="max-w-2xl mt-5 text-lg text-gray-600 md:text-xl">
+      <p className="max-w-2xl mt-3 text-base text-gray-600 md:text-lg">
         Automate tasks, unlock insights, and scale your team's
         <br /> productivity — all in one place
       </p>
@@ -31,7 +31,7 @@ export default function Hero() {
       </div>
 
       {/* Proof / Founders */}
-      <div className="z-10 mt-10 flex items-center justify-center gap-3">
+      <div className="z-10 mt-8 flex items-center justify-center gap-3">
         <div className="-space-x-3 flex">
           <div className="h-8 w-8 border-2 flex items-center justify-center bg-gray-200 border-white shadow-sm overflow-hidden rounded-full">
             <img

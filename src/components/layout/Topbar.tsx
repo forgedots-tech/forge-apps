@@ -11,8 +11,8 @@ export default function Topbar() {
           iconClassName="text-primary"
           className="bg-muted border-2 border-white shadow-xl"
         /> */}
-        <div className="-space-y-1">
-          <h1 className="text-lg font-semibold">Forge-Apps</h1>
+        <div className="-space-y-0.5">
+          <h1 className="text-lg font-semibold">Forgedots</h1>
           <p className="text-xs font-medium text-muted-foreground">
             AI Solutions
           </p>

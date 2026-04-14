@@ -22,12 +22,12 @@ export default function Apps() {
   }, []);
 
   return (
-    <section id="apps" className="px-4 py-24 md:px-8">
+    <section id="apps" className="px-4 py-16 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
-        <h2 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl text-center">
+        <h2 className="mb-4 text-2xl font-bold tracking-tight md:text-3xl text-center">
           Our Applications
         </h2>
-        <p className="mb-16 max-w-lg text-base text-center text-gray-500">
+        <p className="mb-10 max-w-lg text-base text-center text-gray-600">
           Discover our specialized AI-powered tools designed to transform your
           business workflows.
         </p>

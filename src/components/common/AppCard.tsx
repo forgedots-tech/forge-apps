@@ -42,7 +42,7 @@ export function AppCard({
 
       {/* Body Area */}
       <div className="px-8 pb-8">
-        <p className="text-sm leading-relaxed text-gray-600 line-clamp-3">
+        <p className="text-sm leading-normal text-gray-600 line-clamp-3">
           {description}
         </p>
       </div>
@@ -60,7 +60,7 @@ export function AppCard({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-sm text-[#1A1A1A] font-bold group transition-colors hover:text-black"
+          className="flex items-center gap-1.5 text-sm text-[#1A1A1A] font-bold tracking-tight group transition-colors hover:text-black"
         >
           Open Application
           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

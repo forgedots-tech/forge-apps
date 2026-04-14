@@ -47,7 +47,7 @@ export function FeatureCard({ Icon, title, description }: FeatureCardProps) {
       //   rotateY,
       //   transformStyle: "preserve-3d",
       // }}
-      className="relative p-8 pt-10 flex flex-col items-center gap-2 text-center bg-white border border-gray-100 shadow-[0_4px_40px_-10px_rgba(0,0,0,0.05)] rounded-3xl transition-shadow duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]"
+      className="relative p-8 pt-10 flex flex-col items-center gap-2 text-center bg-white shadow-[0_4px_40px_-10px_rgba(0,0,0,0.05)] rounded-3xl transition-shadow duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]"
     >
       <div
         // style={{ transform: "translateZ(50px)" }}

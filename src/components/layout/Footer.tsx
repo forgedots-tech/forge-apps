@@ -6,9 +6,12 @@ export default function Footer() {
           © {new Date().getFullYear()} ForgeDots. All rights reserved.
         </p>
         <div className="flex items-center gap-6 text-sm text-gray-500">
-          <a href="#" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-gray-900 transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-gray-900 transition-colors">Contact</a>
+          <a
+            href="mailto:contract@forgedots.com"
+            className="transition-colors hover:text-gray-900"
+          >
+            Contact us: contract@forgedots.com
+          </a>
         </div>
       </div>
     </footer>

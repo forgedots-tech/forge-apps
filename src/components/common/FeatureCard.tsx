@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { IconBadge } from "@/components/common/IconBadge";
 
@@ -9,13 +10,64 @@ export interface FeatureCardProps {
 }
 
 export function FeatureCard({ Icon, title, description }: FeatureCardProps) {
+  // const x = useMotionValue(0);
+  // const y = useMotionValue(0);
+
+  // const mouseXSpring = useSpring(x);
+  // const mouseYSpring = useSpring(y);
+
+  // const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"]);
+  // const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"]);
+
+  // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   const rect = e.currentTarget.getBoundingClientRect();
+  //   const width = rect.width;
+  //   const height = rect.height;
+  //   const mouseX = e.clientX - rect.left;
+  //   const mouseY = e.clientY - rect.top;
+
+  //   const xPct = mouseX / width - 0.5;
+  //   const yPct = mouseY / height - 0.5;
+
+  //   x.set(xPct);
+  //   y.set(yPct);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   x.set(0);
+  //   y.set(0);
+  // };
+
   return (
-    <div className="relative p-8 pt-9 flex flex-col items-center gap-2 text-center bg-white border-none shadow-[0_4px_40px_-10px_rgba(0,0,0,0.05)] rounded-3xl">
-      <IconBadge icon={Icon} className="absolute -top-5" />
-      <h3 className="text-lg font-medium">{title}</h3>
-      <p className="text-sm leading-snug text-muted-foreground">
+    <motion.div
+      // onMouseMove={handleMouseMove}
+      // onMouseLeave={handleMouseLeave}
+      // style={{
+      //   rotateX,
+      //   rotateY,
+      //   transformStyle: "preserve-3d",
+      // }}
+      className="relative p-8 pt-9 flex flex-col items-center gap-2 text-center bg-white border border-gray-100 shadow-[0_4px_40px_-10px_rgba(0,0,0,0.05)] rounded-3xl transition-shadow duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]"
+    >
+      <div
+        style={{ transform: "translateZ(50px)" }}
+        className="absolute -top-5"
+      >
+        <IconBadge icon={Icon} />
+      </div>
+
+      <h3
+        style={{ transform: "translateZ(30px)" }}
+        className="text-lg font-medium"
+      >
+        {title}
+      </h3>
+      <p
+        style={{ transform: "translateZ(20px)" }}
+        className="text-sm leading-snug text-muted-foreground"
+      >
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 }

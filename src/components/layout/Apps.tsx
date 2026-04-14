@@ -7,6 +7,7 @@ interface AppData {
   category: string;
   description: string;
   logo: string;
+  version: string;
   url: string;
 }
 
@@ -31,7 +32,7 @@ export default function Apps() {
           business workflows.
         </p>
 
-        <div className="w-full grid grid-cols-1 gap-8 md:grid-cols-2 lg:max-w-4xl">
+        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:max-w-4xl">
           {apps.map((app) => (
             <AppCard
               key={app.id}
@@ -39,6 +40,7 @@ export default function Apps() {
               category={app.category}
               description={app.description}
               logo={app.logo}
+              version={app.version}
               url={app.url}
             />
           ))}

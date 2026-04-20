@@ -1,4 +1,5 @@
 import { StatusBadge } from "../common/StatusBadge";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -6,32 +7,28 @@ export default function Hero() {
       <StatusBadge text="Enterprise Solutions" className="mb-5" />
 
       {/* Headlines */}
-      <h1 className="max-w-4xl text-3xl font-semibold tracking-tight md:text-5xl">
-        Early Access to <br />
-        Future of AI <span className="italic font-light">Growth</span>
+      <h1 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+        Built by <span className="text-primary">Forgedots</span> <br />
+        for the future of <span className="italic font-light">work</span>
       </h1>
 
-      <p className="max-w-2xl mt-3 text-base text-gray-600 md:text-lg">
-        Automate tasks, unlock insights, and scale your team's
-        <br /> productivity — all in one place
+      <p className="max-w-xl mt-3 text-base text-gray-600 md:text-lg">
+        A curated suite of intelligent applications designed to transform how
+        enterprises operate, analyze, and automate.
       </p>
 
-      {/* Waitlist Form */}
-      <div className="z-10 w-full max-w-md mt-10">
-        <div className="relative p-2 ring-1 flex items-center bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] ring-gray-100/50 rounded-full">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-3 flex-1 bg-transparent outline-none text-gray-800 placeholder:text-gray-400"
-          />
-          <button className="px-8 py-3 text-base font-medium text-white bg-[#1A1A1A] rounded-full transition-all hover:bg-black">
-            Join Waitlist
-          </button>
-        </div>
+      {/* Action Buttons */}
+      <div className="z-10 mt-5 flex flex-col items-center gap-4 sm:flex-row sm:gap-4">
+        <button className="px-6 py-3 flex items-center gap-2 text-sm font-semibold text-white bg-primary shadow-xl shadow-primary/25 rounded-full transition-all hover:opacity-90">
+          Explore Our Apps <ArrowRight size={20} />
+        </button>
+        <button className="px-6 py-3 text-sm font-semibold text-foreground bg-white/50 border border-gray-200/50 shadow-sm rounded-full backdrop-blur-sm transition-all hover:bg-white">
+          Learn More
+        </button>
       </div>
 
       {/* Proof / Founders */}
-      <div className="z-10 mt-8 flex items-center justify-center gap-3">
+      <div className="flex z-10 mt-8 items-center justify-center gap-3">
         <div className="-space-x-3 flex">
           <div className="h-8 w-8 border-2 flex items-center justify-center bg-gray-200 border-white shadow-sm overflow-hidden rounded-full">
             <img

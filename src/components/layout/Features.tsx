@@ -5,16 +5,16 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative px-4 md:px-8 flex flex-col items-center justify-center"
+      className="relative px-4 py-16 md:px-8 flex flex-col items-center justify-center gap-10"
     >
-      <div className="w-full max-w-4xl grid gap-8 md:gap-3 md:grid-cols-3">
+      <div className="w-full max-w-5xl grid gap-8 md:gap-3 md:grid-cols-3">
         <FeatureCard
           Icon={Brain}
-          title="Smart Automation"
+          title="AI-Powered Solutions"
           description={
             <>
-              Automate everyday
-              <br /> work fast
+              Intelligent automation and decision-making driven by cutting-edge
+              artificial intelligence.
             </>
           }
         />
@@ -23,8 +23,8 @@ export default function Features() {
           title="AI Insights"
           description={
             <>
-              Unlock data-driven
-              <br /> sharp clarity
+              Built for scale with lightning-fast processing and 99.9% uptime
+              reliability.
             </>
           }
         />
@@ -33,8 +33,8 @@ export default function Features() {
           title="Team Collaboration"
           description={
             <>
-              Boost smart workflows
-              <br /> with AI
+              Enterprise-grade security with full regulatory compliance and data
+              protection.
             </>
           }
         />

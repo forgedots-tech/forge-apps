@@ -33,6 +33,22 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* Brand */
+    --primary: 222 47% 11%;
+    /* deep navy #0F172A */
+    --primary-foreground: 45 33% 97%;
+
+    --indigo: 244 75% 59%;
+    /* #4F46E5 */
+    --indigo-foreground: 45 33% 97%;
+
+    --gold: 46 65% 52%;
+    /* #D4AF37 */
+    --gold-foreground: 222 47% 8%;
+
+    --rose: 12 70% 88%;
+    /* soft rose for orb */
   }
 
   .dark {
@@ -71,12 +87,78 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
-    background-image: url('./assets/bg-image.png');
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @apply bg-zinc-50 text-foreground antialiased;
+    font-family: var(--font-family);
+  }
+}
+
+@layer utilities {
+  .perspective-1200 {
+    perspective: 1200px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@keyframes orb-drift-1 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translate3d(80px, -60px, 0) rotate(180deg) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes orb-drift-2 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-100px, 80px, 0) rotate(-180deg) scale(0.9);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes orb-drift-3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(60px, 100px, 0) scale(1.15);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes orb-drift-4 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-70px, -90px, 0) scale(0.95);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }

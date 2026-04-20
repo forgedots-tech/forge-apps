@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { StatusBadge } from "./StatusBadge";
 
 interface AppCardProps {
   name: string;
@@ -22,7 +23,7 @@ export function AppCard({
       {/* Header Area */}
       <div className="flex items-center gap-3 p-8 pb-4">
         {/* Logo Container */}
-        <div className="h-12 min-w-12 flex items-center justify-center text-xl text-white bg-[#1A1A1A] rounded-full shadow-xl">
+        <div className="h-12 min-w-12 flex items-center justify-center text-xl bg-primary rounded-full shadow-xl">
           {logo}
         </div>
 
@@ -49,12 +50,12 @@ export function AppCard({
 
       {/* Footer Area */}
       <div className="mt-auto flex items-center justify-between border-t border-gray-100 px-8 py-5">
-        <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-xs font-semibold text-muted-foreground">
-            Live
-          </span>
-        </div>
+        <StatusBadge
+          text="Live"
+          dotColor="bg-green-500"
+          pingColor="bg-green-500"
+          className="border-none p-0"
+        />
 
         <a
           href={url}

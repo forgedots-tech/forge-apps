@@ -15,7 +15,7 @@ export function IconBadge({
   return (
     <div
       className={cn(
-        "h-10 w-10 flex items-center justify-center bg-[#1A1A1A] shadow-lg rounded-full",
+        "h-10 w-10 flex items-center justify-center bg-primary shadow-lg rounded-full",
         className,
       )}
     >

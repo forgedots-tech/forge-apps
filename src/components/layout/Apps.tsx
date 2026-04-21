@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { AppCard } from "../common/AppCard";
 
 interface AppData {
@@ -11,16 +10,30 @@ interface AppData {
   url: string;
 }
 
+const APPS_DATA: AppData[] = [
+  {
+    id: "contract-analytics",
+    name: "Contract Analytics",
+    category: "Analytics",
+    description:
+      "Contract Analytics streamlines contract and bid management with automated document analysis, structured approval workflows, and intelligent term extraction — helping teams reduce manual effort, ensure compliance, and make faster, data-driven decisions.",
+    logo: "📈",
+    version: "v1.0",
+    url: "https://contractanalytics.azurewebsites.net/",
+  },
+  {
+    id: "agent-marketplace",
+    name: "Agent Marketplace",
+    category: "AI Agents",
+    description:
+      "Agent Marketplace is a platform to create, customize, and manage AI agents for various use cases, enabling users to automate tasks, workflows, and interactions through configurable intelligence.",
+    logo: "🤖",
+    version: "v1.0",
+    url: "https://proud-desert-083577f00.6.azurestaticapps.net/",
+  },
+];
+
 export default function Apps() {
-  const [apps, setApps] = useState<AppData[]>([]);
-
-  useEffect(() => {
-    fetch("/data/apps.json")
-      .then((res) => res.json())
-      .then((data) => setApps(data))
-      .catch((err) => console.error("Error loading apps:", err));
-  }, []);
-
   return (
     <section id="apps" className="px-4 py-16 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
@@ -33,7 +46,7 @@ export default function Apps() {
         </p>
 
         <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:max-w-4xl">
-          {apps.map((app) => (
+          {APPS_DATA.map((app) => (
             <AppCard
               key={app.id}
               name={app.name}

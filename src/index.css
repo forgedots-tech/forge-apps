@@ -97,7 +97,7 @@
   }
 }
 
-@layer utilities {
+/* @layer utilities {
   .perspective-1200 {
     perspective: 1200px;
   }
@@ -105,9 +105,9 @@
   .preserve-3d {
     transform-style: preserve-3d;
   }
-}
+} */
 
-@keyframes orb-drift-1 {
+/* @keyframes orb-drift-1 {
   0% {
     transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
   }
@@ -161,4 +161,4 @@
   100% {
     transform: translate3d(0, 0, 0) scale(1);
   }
-}
+} */

@@ -48,7 +48,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative px-4 py-16 md:px-8 flex flex-col items-center justify-center gap-10"
+      className="relative px-4 py-16 md:px-8 flex flex-col items-center justify-center"
     >
       <motion.div
         className="w-full max-w-5xl grid gap-8 md:gap-3 md:grid-cols-3"

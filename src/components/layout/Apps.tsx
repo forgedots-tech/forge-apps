@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { AppCard } from "../common/AppCard";
 
 interface AppData {
@@ -33,10 +34,22 @@ const APPS_DATA: AppData[] = [
   },
 ];
 
+const FADE_UP_VARIANTS = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+};
+
 export default function Apps() {
   return (
-    <section id="apps" className="px-4 py-16 md:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
+    <section id="apps" className="relative px-4 py-16 md:px-8">
+      <motion.div
+        className="max-w-6xl mx-auto flex flex-col items-center"
+        initial="hidden"
+        animate="visible"
+        variants={FADE_UP_VARIANTS}
+        transition={{ duration: 0.4, delay: 0.6, ease: "easeInOut" }}
+        style={{ willChange: "transform, opacity" }}
+      >
         <h2 className="mb-4 text-2xl font-semibold tracking-tight md:text-3xl text-center">
           Our Suite of Products
         </h2>
@@ -58,7 +71,7 @@ export default function Apps() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

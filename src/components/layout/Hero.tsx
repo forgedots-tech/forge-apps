@@ -8,6 +8,16 @@ const FADE_UP_VARIANTS = {
 };
 
 export default function Hero() {
+  const scrollToSection = (
+    id: string,
+    block: ScrollLogicalPosition = "start",
+  ) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block,
+    });
+  };
+
   return (
     <section className="relative pt-42 pb-16 px-4 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
       <motion.div
@@ -54,10 +64,16 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.35, ease: "easeInOut" }}
         style={{ willChange: "transform, opacity" }}
       >
-        <button className="px-6 py-3 flex items-center gap-2 text-sm font-semibold text-white bg-primary shadow-xl shadow-primary/25 rounded-full transition-all hover:opacity-90">
+        <button
+          onClick={() => scrollToSection("apps", "start")}
+          className="px-6 py-3 flex items-center gap-2 text-sm font-semibold text-white bg-primary shadow-xl shadow-primary/25 rounded-full transition-all hover:opacity-90"
+        >
           Explore Our Apps <ArrowRight size={20} />
         </button>
-        <button className="px-6 py-3 text-sm font-semibold text-foreground bg-white/50 border border-gray-200/50 shadow-sm rounded-full backdrop-blur-sm transition-all hover:bg-white">
+        <button
+          onClick={() => scrollToSection("features", "center")}
+          className="px-6 py-3 text-sm font-semibold text-foreground bg-white/50 border border-gray-200/50 shadow-sm rounded-full backdrop-blur-sm transition-all hover:bg-white"
+        >
           Learn More
         </button>
       </motion.div>

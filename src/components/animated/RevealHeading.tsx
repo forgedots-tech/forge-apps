@@ -15,7 +15,7 @@ export function RevealHeading({ children, className }: Props) {
 
   const renderContent = (node: React.ReactNode): React.ReactNode => {
     if (typeof node === "string") {
-      return node.split(/(\s+)/).map((part, j) => {
+      return node.split(/(\s+)/).map((part, _j) => {
         if (part.trim() === "") return part; // Preserve spaces as strings
 
         const delayIndex = globalWordIndex++;

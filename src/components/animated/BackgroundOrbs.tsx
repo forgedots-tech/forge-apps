@@ -12,7 +12,7 @@ export function BackgroundOrbs() {
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
             "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
@@ -50,7 +50,7 @@ export function BackgroundOrbs() {
       >
         <polygon
           points="100,15 190,180 10,180"
-          stroke="hsl(var(--indigo) / 0.4)"
+          stroke="hsl(var(--indigo) / 0.6)"
           strokeWidth="0.6"
           fill="none"
         />

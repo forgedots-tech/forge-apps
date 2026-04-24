@@ -1,23 +1,21 @@
 import Topbar from "./components/layout/Topbar";
 import Hero from "./components/layout/Hero";
-import Features from "./components/layout/Features";
+// import Features from "./components/layout/Features";
 import Apps from "./components/layout/Apps";
 import Footer from "./components/layout/Footer";
 import { BackgroundOrbs } from "./components/animated/BackgroundOrbs";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="h-screen flex flex-col">
       <BackgroundOrbs />
-      <div className="relative z-10">
-        <Topbar />
-        <main>
-          <Hero />
-          <Features />
-          <Apps />
-        </main>
-        <Footer />
-      </div>
+      <Topbar />
+      <main className="flex-1 relative z-10">
+        <Hero />
+        {/* <Features /> */}
+        <Apps />
+      </main>
+      <Footer />
     </div>
   );
 }

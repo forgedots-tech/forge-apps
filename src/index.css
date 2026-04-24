@@ -13,8 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 21 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --primary-start: 21 100% 59%;
+    /* #FF782D */
+    --primary-end: 275 74% 35%;
+    /* #63179A */
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -33,11 +37,6 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
-    /* Brand */
-    --primary: 222 47% 11%;
-    /* deep navy #0F172A */
-    --primary-foreground: 45 33% 97%;
 
     --indigo: 244 75% 59%;
     /* #4F46E5 */
@@ -61,8 +60,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 21 100% 59%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -97,68 +96,27 @@
   }
 }
 
-/* @layer utilities {
-  .perspective-1200 {
-    perspective: 1200px;
+@layer utilities {
+  .bg-primary {
+    background: linear-gradient(to right, hsl(var(--primary-start)), hsl(var(--primary-end))) !important;
+    border: none;
   }
 
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
-} */
-
-/* @keyframes orb-drift-1 {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
-  }
-
-  50% {
-    transform: translate3d(80px, -60px, 0) rotate(180deg) scale(1.1);
+  .text-primary {
+    background-image: linear-gradient(to right, hsl(var(--primary-start)), hsl(var(--primary-end))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    display: inline;
   }
 
-  100% {
-    transform: translate3d(0, 0, 0) rotate(360deg) scale(1);
+  .text-primary span {
+    background-image: linear-gradient(to right, hsl(var(--primary-start)), hsl(var(--primary-end))) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    display: inline-block;
   }
 }
-
-@keyframes orb-drift-2 {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
-  }
-
-  50% {
-    transform: translate3d(-100px, 80px, 0) rotate(-180deg) scale(0.9);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) rotate(-360deg) scale(1);
-  }
-}
-
-@keyframes orb-drift-3 {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate3d(60px, 100px, 0) scale(1.15);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-@keyframes orb-drift-4 {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate3d(-70px, -90px, 0) scale(0.95);
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-} */

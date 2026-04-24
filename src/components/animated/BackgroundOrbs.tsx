@@ -44,19 +44,19 @@ export function BackgroundOrbs() {
       {/* Triangle — bottom left */}
       <motion.svg
         style={{ y: y3, rotate: useTransform(scrollY, [0, 1500], [0, -90]) }}
-        className="absolute bottom-[10%] -left-10 h-[200px] w-[200px] opacity-30"
+        className="absolute bottom-[10%] -left-10 h-[300px] w-[300px] opacity-30"
         viewBox="0 0 200 200"
         fill="none"
       >
         <polygon
           points="100,15 190,180 10,180"
-          stroke="hsl(var(--indigo))"
+          stroke="hsl(var(--indigo) / 0.4)"
           strokeWidth="0.6"
           fill="none"
         />
         <polygon
           points="100,45 165,165 35,165"
-          stroke="hsl(var(--indigo) / 0.6)"
+          stroke="hsl(var(--indigo) / 0.4)"
           strokeWidth="0.5"
           fill="none"
         />

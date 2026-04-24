@@ -41,16 +41,16 @@ const FADE_UP_VARIANTS = {
 
 export default function Apps() {
   return (
-    <section id="apps" className="relative px-4 py-16 md:px-8">
+    <section id="apps" className="relative px-4 py-6 md:px-8">
       <motion.div
         className="max-w-6xl mx-auto flex flex-col items-center"
         initial="hidden"
         animate="visible"
         variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.6, ease: "easeInOut" }}
+        transition={{ duration: 0.4, delay: 0.4, ease: "easeInOut" }}
         style={{ willChange: "transform, opacity" }}
       >
-        <h2 className="mb-4 text-2xl font-semibold tracking-tight md:text-3xl text-center">
+        <h2 className="mb-3 text-xl font-semibold tracking-tight md:text-2xl text-center">
           Our Suite of Products
         </h2>
         <p className="mb-10 max-w-md text-base text-center text-gray-600">
@@ -58,7 +58,7 @@ export default function Apps() {
           business workflows.
         </p>
 
-        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:max-w-4xl">
+        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 max-w-4xl">
           {APPS_DATA.map((app) => (
             <AppCard
               key={app.id}

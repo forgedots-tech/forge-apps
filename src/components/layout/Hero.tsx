@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { StatusBadge } from "../common/StatusBadge";
 import { ArrowRight } from "lucide-react";
+import { RevealHeading } from "../animated/RevealHeading";
 
 const FADE_UP_VARIANTS = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
@@ -20,35 +21,22 @@ export default function Hero() {
 
   return (
     <section className="relative pt-42 pb-16 px-4 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
-        style={{ willChange: "transform, opacity" }}
-      >
+      <motion.div>
         <StatusBadge text="Enterprise Solutions" className="mb-5" />
       </motion.div>
 
       {/* Headlines */}
-      <motion.h1
-        className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl"
-        initial="hidden"
-        animate="visible"
-        variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
-        style={{ willChange: "transform, opacity" }}
-      >
+      <RevealHeading className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
         Built by <span className="text-primary">Forgedots</span> <br />
         for the future of <span className="italic font-light">work</span>
-      </motion.h1>
+      </RevealHeading>
 
       <motion.p
         className="max-w-xl mt-3 text-base text-gray-600 md:text-lg"
         initial="hidden"
         animate="visible"
         variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
         style={{ willChange: "transform, opacity" }}
       >
         A curated suite of intelligent applications designed to transform how
@@ -61,7 +49,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.35, ease: "easeInOut" }}
+        transition={{ duration: 0.4, delay: 0.3, ease: "easeInOut" }}
         style={{ willChange: "transform, opacity" }}
       >
         <button
@@ -70,16 +58,18 @@ export default function Hero() {
         >
           Explore Our Apps <ArrowRight size={20} />
         </button>
-        <button
-          onClick={() => scrollToSection("features", "center")}
+        <a
+          href="https://forgedots.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-3 text-sm font-semibold text-foreground bg-white/50 border border-gray-200/50 shadow-sm rounded-full backdrop-blur-sm transition-all hover:bg-white"
         >
           Learn More
-        </button>
+        </a>
       </motion.div>
 
       {/* Proof / Founders */}
-      <motion.div
+      {/* <motion.div
         className="flex z-10 mt-8 items-center justify-center gap-3"
         initial="hidden"
         animate="visible"
@@ -113,7 +103,7 @@ export default function Hero() {
         <p className="text-sm font-medium text-gray-600">
           Join 120 + SaaS & AI founders
         </p>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

@@ -12,7 +12,7 @@ export function BackgroundOrbs() {
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage:
             "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",

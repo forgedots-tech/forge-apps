@@ -53,7 +53,7 @@ export default function Hero() {
         style={{ willChange: "transform, opacity" }}
       >
         <button
-          onClick={() => scrollToSection("apps", "start")}
+          onClick={() => scrollToSection("apps", "nearest")}
           className="px-6 py-3 flex items-center gap-2 text-sm font-semibold text-white bg-primary shadow-xl shadow-primary/25 rounded-full transition-all hover:opacity-90"
         >
           Explore Our Apps <ArrowRight size={20} />

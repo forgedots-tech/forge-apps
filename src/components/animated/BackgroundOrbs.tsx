@@ -27,24 +27,24 @@ export function BackgroundOrbs() {
       {/* Large outlined circle — top left */}
       <motion.div
         style={{ y: y1, rotate: rot }}
-        className="absolute -top-32 -left-40 h-[520px] w-[520px] rounded-full border border-foreground/10"
+        className="absolute -top-20 -left-20 size-[300px] rounded-full border border-foreground/10 md:-top-32 md:-left-40 md:size-[520px]"
       >
-        <div className="absolute inset-12 rounded-full border border-indigo/15" />
-        <div className="absolute inset-28 rounded-full border border-foreground/5" />
+        <div className="absolute inset-8 rounded-full border border-indigo/15 md:inset-12" />
+        <div className="absolute inset-20 rounded-full border border-foreground/5 md:inset-28" />
       </motion.div>
 
       {/* Rotated square — top right */}
       <motion.div
         style={{ y: y2, rotate: useTransform(scrollY, [0, 1500], [12, -20]) }}
-        className="absolute top-[12%] -right-32 h-[420px] w-[420px] border border-gold/25"
+        className="absolute top-[10%] -right-20 size-[240px] border border-gold/25 md:top-[12%] md:-right-32 md:size-[420px]"
       >
-        <div className="absolute inset-10 border border-gold/15" />
+        <div className="absolute inset-6 border border-gold/15 md:inset-10" />
       </motion.div>
 
       {/* Triangle — bottom left */}
       <motion.svg
         style={{ y: y3, rotate: useTransform(scrollY, [0, 1500], [0, -90]) }}
-        className="absolute bottom-[10%] -left-10 h-[300px] w-[300px] opacity-30"
+        className="absolute bottom-[8%] -left-6 size-[180px] opacity-30 md:bottom-[10%] md:-left-10 md:size-[250px]"
         viewBox="0 0 200 200"
         fill="none"
       >
@@ -65,34 +65,37 @@ export function BackgroundOrbs() {
       {/* Small accent dot cluster — middle right */}
       <motion.div
         style={{ y: y4 }}
-        className="absolute top-[45%] right-[8%] grid grid-cols-6 gap-3 opacity-40"
+        className="absolute top-[40%] right-[5%] grid grid-cols-6 gap-2 opacity-40 md:top-[45%] md:right-[8%] md:gap-3"
       >
         {Array.from({ length: 36 }).map((_, i) => (
-          <div key={i} className="h-1 w-1 rounded-full bg-foreground/40" />
+          <div
+            key={i}
+            className="size-0.5 rounded-full bg-foreground/40 md:size-1"
+          />
         ))}
       </motion.div>
 
       {/* Soft single glow — center, very subtle */}
-      <div className="absolute left-1/2 top-1/3 h-[700px] w-[700px] -translate-x-1/2 rounded-full opacity-40 blur-3xl">
+      <div className="absolute left-1/2 top-1/3 size-[400px] -translate-x-1/2 rounded-full opacity-40 blur-3xl md:size-[700px]">
         <div className="h-full w-full rounded-full bg-[radial-gradient(circle_at_center,hsl(var(--indigo)/0.18),transparent_65%)]" />
       </div>
 
       {/* Gold accent line — diagonal */}
       <motion.div
         style={{ y: y2 }}
-        className="absolute top-[30%] left-[15%] h-px w-[280px] origin-left rotate-[25deg] bg-gradient-to-r from-transparent via-gold/40 to-transparent"
+        className="absolute top-[30%] left-[10%] h-px w-[150px] origin-left rotate-[25deg] bg-gradient-to-r from-transparent via-gold/40 to-transparent md:left-[15%] md:w-[280px]"
       />
       <motion.div
         style={{ y: y1 }}
-        className="absolute bottom-[25%] right-[20%] h-px w-[220px] origin-left -rotate-[15deg] bg-gradient-to-r from-transparent via-indigo/40 to-transparent"
+        className="absolute bottom-[20%] right-[15%] h-px w-[120px] origin-left -rotate-[15deg] bg-gradient-to-r from-transparent via-indigo/40 to-transparent md:bottom-[25%] md:right-[20%] md:w-[220px]"
       />
 
       {/* Small floating ring — bottom right */}
       <motion.div
         style={{ y: y3, rotate: useTransform(scrollY, [0, 1500], [0, -30]) }}
-        className="absolute bottom-[15%] right-[10%] h-[180px] w-[180px] rounded-full border-2 border-foreground/8"
+        className="absolute bottom-[12%] right-[5%] size-[100px] rounded-full border-2 border-foreground/8 md:bottom-[15%] md:right-[10%] md:size-[180px]"
       >
-        <div className="absolute inset-4 rounded-full border border-gold/20" />
+        <div className="absolute inset-3 rounded-full border border-gold/20 md:inset-4" />
       </motion.div>
     </div>
   );

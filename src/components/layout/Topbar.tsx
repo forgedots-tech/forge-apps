@@ -8,7 +8,7 @@ export default function Topbar() {
           "https://www.forgedots.com/wp-content/uploads/2024/04/dots-logo.png"
         }
         alt="Logo"
-        className="w-52 relative z-50"
+        className="w-42 md:w-52 relative z-50"
       />
 
       <StatusBadge text="All systems live" className="border-none" />

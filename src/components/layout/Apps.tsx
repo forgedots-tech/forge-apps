@@ -51,7 +51,7 @@ export default function Apps() {
         style={{ willChange: "transform, opacity" }}
       >
         <h2 className="mb-3 text-xl font-semibold tracking-tight md:text-2xl text-center">
-          Our Suite of Products
+          Our Suite of <span className="text-primary">Products</span>
         </h2>
         <p className="mb-10 max-w-md text-base text-center text-gray-600">
           Discover our specialized AI-powered tools designed to transform your

@@ -20,7 +20,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-42 pb-16 px-4 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
+    <section className="relative pt-42 pb-16 px-5 md:px-8 min-h-[80vh] flex flex-col items-center justify-center text-center">
       <motion.div>
         <StatusBadge text="Enterprise Solutions" className="mb-5" />
       </motion.div>
@@ -53,7 +53,7 @@ export default function Hero() {
         style={{ willChange: "transform, opacity" }}
       >
         <button
-          onClick={() => scrollToSection("apps", "nearest")}
+          onClick={() => scrollToSection("apps", "start")}
           className="px-6 py-3 flex items-center gap-2 text-sm font-semibold text-white bg-primary shadow-xl shadow-primary/25 rounded-full transition-all hover:opacity-90"
         >
           Explore Our Apps <ArrowRight size={20} />

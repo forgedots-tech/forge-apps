@@ -19,11 +19,11 @@ export function AppCard({
   url,
 }: AppCardProps) {
   return (
-    <div className="relative flex flex-col bg-[#f9f9f9] border-8 border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+    <div className="relative flex flex-col bg-[#f9f9f9] border-8 border-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-3xl transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
       {/* Header Area */}
       <div className="flex items-center gap-3 p-8 pb-4">
         {/* Logo Container */}
-        <div className="h-12 min-w-12 flex items-center justify-center text-xl bg-primary rounded-full shadow-xl">
+        <div className="h-12 min-w-12 flex items-center justify-center text-2xl bg-primary rounded-full shadow-xl">
           {logo}
         </div>
 
@@ -43,7 +43,7 @@ export function AppCard({
 
       {/* Body Area */}
       <div className="px-8 pb-8">
-        <p className="text-sm leading-normal text-gray-600 line-clamp-3">
+        <p className="text-sm leading-normal text-gray-600 line-clamp-4">
           {description}
         </p>
       </div>

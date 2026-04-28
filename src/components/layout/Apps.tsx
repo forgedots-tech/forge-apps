@@ -15,9 +15,9 @@ const APPS_DATA: AppData[] = [
   {
     id: "contract-analytics",
     name: "Contract Analytics",
-    category: "Analytics",
+    category: "AI Contract Intelligence",
     description:
-      "Contract Analytics streamlines contract and bid management with automated document analysis, structured approval workflows, and intelligent term extraction — helping teams reduce manual effort, ensure compliance, and make faster, data-driven decisions.",
+      "Contract Analytics is a platform to manage contracts and bids with automated document analysis, structured workflows, and intelligent term extraction, enabling teams to reduce manual effort, ensure compliance, and make faster data-driven decisions.",
     logo: "📈",
     version: "v1.0",
     url: "https://contractanalytics.azurewebsites.net/",
@@ -25,12 +25,22 @@ const APPS_DATA: AppData[] = [
   {
     id: "agent-marketplace",
     name: "Agent Marketplace",
-    category: "AI Agents",
+    category: "AI Agent Builder",
     description:
       "Agent Marketplace is a platform to create, customize, and manage AI agents for various use cases, enabling users to automate tasks, workflows, and interactions through configurable intelligence.",
     logo: "🤖",
     version: "v1.0",
     url: "https://proud-desert-083577f00.6.azurestaticapps.net/",
+  },
+  {
+    id: "doc-extraction",
+    name: "Document Extraction",
+    category: "AI Document Intelligence",
+    description:
+      "Doc Extraction is a platform to extract key clauses from documents using predefined templates, enabling users to automate the identification and structuring of important information from complex files with improved accuracy and efficiency.",
+    logo: "📄",
+    version: "v1.0",
+    url: "https://blue-field-09c556b1e.2.azurestaticapps.net",
   },
 ];
 
@@ -41,9 +51,9 @@ const FADE_UP_VARIANTS = {
 
 export default function Apps() {
   return (
-    <section id="apps" className="relative px-4 py-6 md:px-8">
+    <section id="apps" className="relative px-5 pt-6 pb-12 md:px-20">
       <motion.div
-        className="max-w-6xl mx-auto flex flex-col items-center"
+        className="mx-auto flex flex-col items-center"
         initial="hidden"
         animate="visible"
         variants={FADE_UP_VARIANTS}
@@ -58,7 +68,7 @@ export default function Apps() {
           business workflows.
         </p>
 
-        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 max-w-4xl">
+        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {APPS_DATA.map((app) => (
             <AppCard
               key={app.id}

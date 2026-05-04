@@ -63,7 +63,7 @@ export default function Apps() {
           variants={FADE_UP_VARIANTS}
           transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
           style={{ willChange: "transform, opacity" }}
-          className="mb-10 max-w-md text-base text-center text-gray-600"
+          className="mb-12 max-w-md text-base text-center text-gray-600"
         >
           Discover our specialized AI-powered tools designed to transform your
           business workflows.
@@ -79,7 +79,7 @@ export default function Apps() {
             transition={{
               duration: 0.4,
               ease: "easeOut",
-              delay: 0.2 + 0.08 * index,
+              delay: 0.1 + 0.08 * index,
             }}
           >
             <AppCard

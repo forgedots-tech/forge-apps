@@ -57,7 +57,7 @@ export default function Apps() {
         initial="hidden"
         animate="visible"
         variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.4, ease: "easeInOut" }}
+        transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
         style={{ willChange: "transform, opacity" }}
       >
         <h2 className="mb-3 text-xl font-semibold tracking-tight md:text-2xl text-center">

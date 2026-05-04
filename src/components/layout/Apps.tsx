@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AppCard } from "../common/AppCard";
+import { RevealHeading } from "../animated/RevealHeading";
 
 interface AppData {
   id: string;
@@ -45,33 +46,43 @@ const APPS_DATA: AppData[] = [
 ];
 
 const FADE_UP_VARIANTS = {
-  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1 },
 };
 
 export default function Apps() {
   return (
     <section id="apps" className="relative px-5 pt-6 pb-12 md:px-20">
-      <motion.div
-        className="mx-auto flex flex-col items-center"
-        initial="hidden"
-        animate="visible"
-        variants={FADE_UP_VARIANTS}
-        transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
-        style={{ willChange: "transform, opacity" }}
-      >
-        <h2 className="mb-3 text-xl font-semibold tracking-tight md:text-2xl text-center">
+      <div className="flex flex-col items-center">
+        <RevealHeading className="mb-3 text-2xl font-semibold tracking-tight md:text-4xl text-center">
           Our Suite of <span className="text-primary">Products</span>
-        </h2>
-        <p className="mb-10 max-w-md text-base text-center text-gray-600">
+        </RevealHeading>
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          variants={FADE_UP_VARIANTS}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
+          style={{ willChange: "transform, opacity" }}
+          className="mb-10 max-w-md text-base text-center text-gray-600"
+        >
           Discover our specialized AI-powered tools designed to transform your
           business workflows.
-        </p>
+        </motion.p>
+      </div>
 
-        <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {APPS_DATA.map((app) => (
+      <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {APPS_DATA.map((app, index) => (
+          <motion.div
+            key={app.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.4,
+              ease: "easeOut",
+              delay: 0.2 + 0.08 * index,
+            }}
+          >
             <AppCard
-              key={app.id}
               name={app.name}
               category={app.category}
               description={app.description}
@@ -79,9 +90,9 @@ export default function Apps() {
               version={app.version}
               url={app.url}
             />
-          ))}
-        </div>
-      </motion.div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
